@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "start": "webpack --config webpack.config.js"
+  },
   "dependencies": {
     "react": "^16.8.1",
     "react-dom": "^16.8.1"
@@ -10,5 +13,8 @@
   "devDependencies": {
     "webpack": "^4.29.3",
     "webpack-cli": "^3.2.3"
+  },
+  "resolutions": {
+    "ajv": "6.8.1"
   }
 }
