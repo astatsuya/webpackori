@@ -1,9 +1,9 @@
 import React from 'react';
-import Header from './header';
+import Counter from './conter';
 
 const Index = () => (
   <div>
-    <Header />
+    <Counter />
     <p>これはapp.js</p>
   </div>
 );
