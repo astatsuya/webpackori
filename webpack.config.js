@@ -4,7 +4,8 @@ module.exports = {
   mode: 'production',
   entry: './src/index.js',
   devServer: {
-    contentBase: path.join(__dirname, 'public')
+    contentBase: path.join(__dirname, 'public'),
+    port: 3000
   },
   output: {
     filename: 'bundle.js',

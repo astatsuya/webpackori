@@ -1,5 +1,5 @@
 import React from 'react';
-import Counter from './conter';
+import Counter from './counter';
 
 const Index = () => (
   <div>
