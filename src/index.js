@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { AppContainer } from 'react-hot-loader';
 import Index from './components/app.js';
 
 // module.hot.accept('./components/app', () => {
@@ -11,25 +10,25 @@ import Index from './components/app.js';
 //   );
 // })
 
-const render = Component => {
-  ReactDOM.render(
-    <AppContainer>
-      <Component />
-    </AppContainer>,
-    document.getElementById('root')
-  );
-}
+// const render = Component => {
+//   ReactDOM.render(
+//     <AppContainer>
+//       <Component />
+//     </AppContainer>,
+//     document.getElementById('root')
+//   );
+// }
 
-render(Index);
+// render(Index);
 
-if (module.hot) {
-  module.hot.accept('./components/app.js', () => {
-    const NextRootContainer = require('./components/app.js').default;
-    render(<NextRootContainer />, document.getElementById('react-root'));
-  })
-}
+// if (module.hot) {
+//   module.hot.accept('./components/app.js', () => {
+//     const NextRootContainer = require('./components/app.js').default;
+//     render(<NextRootContainer />, document.getElementById('react-root'));
+//   })
+// }
 
-// render(
-//   <Index />,
-//   document.getElementById('root')
-// );
+ReactDOM.render(
+  <Index />,
+  document.getElementById('root')
+);
