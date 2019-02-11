@@ -1,5 +1,6 @@
 import React from 'react';
 import Counter from './counter';
+import { hot } from 'react-hot-loader/root'
 
 const Index = () => (
   <div>
@@ -8,4 +9,4 @@ const Index = () => (
   </div>
 );
 
-export default Index;
+export default hot(Index);
