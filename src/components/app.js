@@ -1,10 +1,12 @@
 import React from 'react';
-import Counter from './counter';
 import { hot } from 'react-hot-loader'
+import Test from './test';
+import Counter from './counter';
 
 const Index = () => (
   <div>
     <Counter />
+    <Test />
     <p>これはapp.js</p>
   </div>
 );
