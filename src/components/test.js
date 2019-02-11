@@ -1,9 +1,12 @@
 import React from 'react';
+import { hot } from 'react-hot-loader'
+
 
 const Test = () => (
   <div>
-    t
+    <p>diremkfds</p>
   </div>
 );
 
-export default Test;
+export default hot(module)(Test);
+// export default Test;
