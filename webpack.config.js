@@ -3,7 +3,6 @@ const path = require('path');
 const webpack = require('webpack');
 
 const htmlPlugin = new HtmlWebpackPlugin({
-  title: "jtite",
   template: "./public/index.html",
   filename: "./index.html"
 });
@@ -12,12 +11,12 @@ module.exports = {
   mode: 'production',
   // entry: ['react-hot-loader/patch', './src/index.js'],
   entry: './src/index.js',
-  devServer: {
-    contentBase: path.join(__dirname, 'public'),
-    port: 3000,
-    compress: true,
-    hot: true,
-  },
+  // devServer: {
+  //   contentBase: path.join(__dirname, 'public'),
+  //   port: 3000,
+  //   compress: true,
+  //   hot: true,
+  // },
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'public'),
@@ -38,10 +37,10 @@ module.exports = {
     ]
   },
   performance: {
-    hints: false
+    hints: 'warning'
   },
   plugins: [
-    // htmlPlugin,
+    htmlPlugin,
     // new HtmlWebpackPlugin(),
     new webpack.HotModuleReplacementPlugin()
   ]

@@ -2,7 +2,7 @@ import React from 'react';
 
 const Test = () => (
   <div>
-    tetettt
+    t
   </div>
 );
 
