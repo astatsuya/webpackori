@@ -33,7 +33,6 @@ module.exports = {
             options: {
             modules: true,
             localIdentName: "[name]_[local]_[hash:base64]",
-            sourceMap: true,
             }
           }
         ]
