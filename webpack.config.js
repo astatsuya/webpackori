@@ -41,7 +41,6 @@ module.exports = {
   },
   plugins: [
     htmlPlugin,
-    // new HtmlWebpackPlugin(),
     new webpack.HotModuleReplacementPlugin()
   ]
 };

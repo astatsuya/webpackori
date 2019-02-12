@@ -4,7 +4,7 @@ import { hot } from 'react-hot-loader'
 
 const Test = () => (
   <div>
-    <p>diremkfds</p>
+    <p>test</p>
   </div>
 );
 

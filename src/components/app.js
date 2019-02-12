@@ -7,7 +7,7 @@ const Index = () => (
   <div>
     <Counter />
     <Test />
-    <p>これっっdfs</p>
+    <p>これはindex</p>
   </div>
 );
 
