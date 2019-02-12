@@ -10,25 +10,12 @@ const htmlPlugin = new HtmlWebpackPlugin({
 
 module.exports = {
   mode: 'production',
-  // entry: ['react-hot-loader/patch', './src/index.js'],
   entry: './src/index.js',
-  // devServer: {
-  //   contentBase: path.join(__dirname, 'public'),
-  //   port: 3000,
-  //   compress: true,
-  //   hot: true,
-  // },
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'public'),
   },
   module: {
-  //   rules: [
-  //     {
-  //       test: /\.(js|jsx)$/,
-  //       exclude: /node_modules/,
-  //       loaders: ['react-hot-loader/webpack', 'babel-loader']
-  //     },
     rules: [
       {
         test: /\.(js|jsx)$/,
@@ -40,19 +27,13 @@ module.exports = {
         use: [
           {
             loader: "style-loader",
-            options: {
-              sourceMap: true,
-              // hmr: false
-            }
           },
           {
             loader: "css-loader",
             options: {
             modules: true,
-            // importLoaders: 1,
             localIdentName: "[name]_[local]_[hash:base64]",
             sourceMap: true,
-            // minimize: true
             }
           }
         ]

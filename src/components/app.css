@@ -4,14 +4,14 @@
 } */
 
 .app {
-  color: red;
+  color: blue;
 }
 
 p {
-  background-color: red;
+  background-color: blue;
   color: white;
 }
 
 .app h2 {
-  color: pink;
+  color: brown;
 }
