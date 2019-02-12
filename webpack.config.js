@@ -53,7 +53,7 @@ module.exports = {
   },
   plugins: [
     htmlPlugin,
-    // new HtmlWebpackPlugin(),
+    new HtmlWebpackPlugin(),
     new webpack.HotModuleReplacementPlugin(),
     // miniCssPlugin
   ]
