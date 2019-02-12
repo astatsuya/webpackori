@@ -39,16 +39,20 @@ module.exports = {
         test: /\.css$/,
         use: [
           {
-            loader: "style-loader"
+            loader: "style-loader",
+            options: {
+              sourceMap: true,
+              // hmr: false
+            }
           },
           {
             loader: "css-loader",
-              options: {
-              // modules: true,
-              // importLoaders: 1,
-              // localIdentName: "[name]_[local]_[hash:base64]",
-              // sourceMap: true,
-              // minimize: true
+            options: {
+            modules: true,
+            // importLoaders: 1,
+            localIdentName: "[name]_[local]_[hash:base64]",
+            sourceMap: true,
+            // minimize: true
             }
           }
         ]
@@ -61,6 +65,5 @@ module.exports = {
   plugins: [
     htmlPlugin,
     new webpack.HotModuleReplacementPlugin(),
-    // miniCssPlugin
   ]
 };
