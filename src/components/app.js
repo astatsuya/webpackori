@@ -6,7 +6,7 @@ import styles from '../index.css'
 
 const Index = (props) => (
   // <div>
-  <div className="index" style={styles}>
+  <div className={styles.index}>
     <Counter />
     <Test />
     <p>ここはIndex</p>
