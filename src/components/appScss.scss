@@ -1,0 +1,24 @@
+@import '../styles';
+
+// $brown: brown;
+
+.app {
+  color: red;
+  p {
+  background-color: yellow;
+  color: red;
+  }
+  h2 {
+  color:$brown;
+  }
+  @include button;
+}
+
+// p {
+//   background-color: blue;
+//   color: white;
+// }
+
+// .app h2 {
+//   color: brown;
+// }

@@ -23,7 +23,7 @@ module.exports = {
         loader: 'babel-loader'
       },
       {
-        test: /\.css$/,
+        test: /\.(css|scss)$/,
         use: [
           {
             loader: "style-loader",
@@ -34,6 +34,13 @@ module.exports = {
             modules: true,
             localIdentName: "[name]_[local]_[hash:base64]",
             }
+          },
+          {
+            loader:"sass-loader",
+            // options: {
+            // modules: true,
+            // localIdentName: "[name]_[local]_[hash:base64]",
+            // }
           }
         ]
       }
