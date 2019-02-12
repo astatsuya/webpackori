@@ -1,0 +1,17 @@
+/* .app {
+  width: 50%;
+  color: yellow;
+} */
+
+.app {
+  color: green;
+}
+
+p {
+  background-color: blue;
+  color: white;
+}
+
+.app h2 {
+  color: pink;
+}
