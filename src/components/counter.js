@@ -1,5 +1,5 @@
 import React from 'react';
-import { hot } from 'react-hot-loader';
+// import { hot } from 'react-hot-loader';
 
 class Counter extends React.Component {
   constructor(props) {
@@ -29,5 +29,5 @@ class Counter extends React.Component {
   }
 }
 
-// export default Counter;
-export default hot(module)(Counter);
+export default Counter;
+// export default hot(module)(Counter);
