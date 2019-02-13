@@ -1,14 +1,19 @@
 module.exports = {
-    // "extends": "airbnb"
-    "extends": [
+  // "extends": "airbnb"
+  extends: [
     "eslint:recommended",
-    "plugin:react/recommended"
-    ],
-    "parser": "babel-eslint",
-    "globals": {
-        "module": true,
-        "document": true,
-        "require": true,
-        "__dirname": true,
-    }
+    "plugin:react/recommended",
+    "plugin:prettier/recommended"
+  ],
+  parser: "babel-eslint",
+  globals: {
+    module: true,
+    document: true,
+    require: true,
+    __dirname: true
+  },
+  plugins: ["prettier"],
+  rules: {
+    "prettier/prettier": ["error", { singleQuote: true }]
+  }
 };
