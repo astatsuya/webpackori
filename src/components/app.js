@@ -1,8 +1,8 @@
-import React from 'react';
-import { hot } from 'react-hot-loader';
-import Test from './test';
-import Counter from './counter';
-import styles from './appScss.scss';
+import React from "react";
+import { hot } from "react-hot-loader";
+import Test from "./test";
+import Counter from "./counter";
+import styles from "./appScss.scss";
 
 const App = () => (
   <div className={styles.app}>
