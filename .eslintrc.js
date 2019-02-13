@@ -8,5 +8,7 @@ module.exports = {
     "globals": {
         "module": true,
         "document": true,
+        "require": true,
+        "__dirname": true,
     }
 };
