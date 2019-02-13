@@ -5,7 +5,9 @@
   "license": "MIT",
   "scripts": {
     "start": "webpack-dev-server --hot --mode development --open",
-    "build": "webpack --config webpack.config.js"
+    "build": "webpack --config webpack.config.js",
+    "eslint": "eslint \"src/**/*.{js,jsx}\"",
+    "stylelint": "stylelint src/**/*.*"
   },
   "dependencies": {
     "react": "^16.8.1",
