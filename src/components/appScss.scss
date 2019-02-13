@@ -4,13 +4,16 @@
 
 .app {
   color: red;
+
   p {
-  background-color: yellow;
-  color: red;
+    background-color: yellow;
+    color: red;
   }
+
   h2 {
-  color:$brown;
+    color: $brown;
   }
+
   @include button;
 }
 
