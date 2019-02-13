@@ -1,5 +1,5 @@
-import React from "react";
-import { hot } from "react-hot-loader";
+import React from 'react';
+// import { hot } from 'react-hot-loader';
 
 const Test = () => (
   <div>
@@ -7,5 +7,5 @@ const Test = () => (
   </div>
 );
 
-export default hot(module)(Test);
-// export default Test;
+// export default hot(module)(Test);
+export default Test;

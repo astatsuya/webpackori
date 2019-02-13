@@ -1,19 +1,18 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 const webpack = require('webpack');
 
 const htmlPlugin = new HtmlWebpackPlugin({
-  template: "./public/index.html",
-  filename: "./index.html"
+  template: './public/index.html',
+  filename: './index.html'
 });
-
 
 module.exports = {
   mode: 'production',
   entry: './src/index.js',
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, 'public'),
+    path: path.resolve(__dirname, 'public')
   },
   module: {
     rules: [
@@ -26,17 +25,17 @@ module.exports = {
         test: /\.(css|scss)$/,
         use: [
           {
-            loader: "style-loader",
+            loader: 'style-loader'
           },
           {
-            loader: "css-loader",
+            loader: 'css-loader',
             options: {
-            modules: true,
-            localIdentName: "[name]_[local]_[hash:base64]",
+              modules: true,
+              localIdentName: '[name]_[local]_[hash:base64]'
             }
           },
           {
-            loader:"sass-loader",
+            loader: 'sass-loader'
             // options: {
             // modules: true,
             // localIdentName: "[name]_[local]_[hash:base64]",
@@ -49,8 +48,5 @@ module.exports = {
   performance: {
     hints: false
   },
-  plugins: [
-    htmlPlugin,
-    new webpack.HotModuleReplacementPlugin(),
-  ]
+  plugins: [htmlPlugin, new webpack.HotModuleReplacementPlugin()]
 };
