@@ -25,9 +25,11 @@ class Counter extends React.Component {
       throw new Error("We couldn't get any data!!!!!");
     }
   }
+
   clickHandler(e) {
-    const increment = this.state.number + 1;
-    const decrement = this.state.number - 1;
+    const { number } = this.state;
+    const increment = number + 1;
+    const decrement = number - 1;
     if (e.target.name === 'increment') {
       this.setState({
         number: increment
@@ -40,9 +42,11 @@ class Counter extends React.Component {
   }
 
   render() {
+    const { number, text } = this.state;
+
     return (
       <div>
-        <h3>{this.state.number}</h3>
+        <h3>{number}</h3>
         <button type="button" name="increment" onClick={this.clickHandler}>
           +
         </button>
@@ -50,8 +54,8 @@ class Counter extends React.Component {
           -
         </button>
         <ul>
-          {this.state.text.map(text => (
-            <li key={text.id}>{text.title}</li>
+          {text.map(arr => (
+            <li key={arr.id}>{arr.title}</li>
           ))}
         </ul>
       </div>

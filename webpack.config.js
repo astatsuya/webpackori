@@ -10,7 +10,7 @@ const htmlPlugin = new HtmlWebpackPlugin({
 
 module.exports = {
   mode: 'production',
-  entry: './src/index.js',
+  entry: './src/index.jsx',
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'public')
@@ -63,6 +63,9 @@ module.exports = {
   devtool: 'source-map',
   devServer: {
     overlay: true
+  },
+  resolve: {
+    extensions: ['.jsx', '.js']
   },
   plugins: [htmlPlugin, new webpack.HotModuleReplacementPlugin()]
 };

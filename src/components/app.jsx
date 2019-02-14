@@ -1,6 +1,7 @@
-/*global module */
+/* global module */
 
 import React from 'react';
+// eslint-disable-next-line import/no-extraneous-dependencies
 import { hot } from 'react-hot-loader';
 import Test from './test';
 import Counter from './counter';
@@ -16,7 +17,7 @@ const App = () => (
     <p>ここはIndex</p>
     <p>ここはIndex</p>
     <p>ここはIndex</p>
-    <img src={boy} width={300} height={300} />
+    <img src={boy} width={300} height={300} alt="boy" />
   </div>
 );
 
