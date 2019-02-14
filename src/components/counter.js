@@ -1,6 +1,5 @@
 import React from 'react';
 import axios from 'axios';
-// import regeneratorRuntime from 'regenerator-runtime';
 
 // import { hot } from 'react-hot-loader';
 
@@ -16,11 +15,15 @@ class Counter extends React.Component {
   }
 
   async componentDidMount() {
-    const getData = await axios.get('http://localhost:3000/posts');
-    const data = await getData.data;
-    this.setState({
-      text: data
-    });
+    try {
+      const getData = await axios.get('http://localhost:3000/postsd');
+      const data = await getData.data;
+      this.setState({
+        text: data
+      });
+    } catch {
+      throw new Error("We couldn't get any data!!!!!");
+    }
   }
   clickHandler(e) {
     const increment = this.state.number + 1;
