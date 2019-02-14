@@ -4,8 +4,6 @@ import React from 'react';
 const Test = () => (
   <div>
     <p>test</p>
-    <p>test</p>
-    <p>test</p>
   </div>
 );
 

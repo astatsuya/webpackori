@@ -11,10 +11,17 @@ class Counter extends React.Component {
     this.clickHandler = this.clickHandler.bind(this);
   }
 
-  clickHandler() {
+  clickHandler(e) {
     const increment = this.state.number + 1;
+    const decrement = this.state.number - 1;
+    if (e.target.name === 'increment') {
+      this.setState({
+        number: increment
+      });
+      return;
+    }
     this.setState({
-      number: increment
+      number: decrement
     });
   }
 
@@ -22,11 +29,11 @@ class Counter extends React.Component {
     return (
       <div>
         <h3>{this.state.number}</h3>
-        <button type="button" onClick={this.clickHandler}>
-          click
+        <button type="button" name="increment" onClick={this.clickHandler}>
+          +
         </button>
-        <button type="button" onClick={this.clickHandler}>
-          click
+        <button type="button" name="decrement" onClick={this.clickHandler}>
+          -
         </button>
       </div>
     );
