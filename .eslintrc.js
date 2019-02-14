@@ -4,17 +4,17 @@ module.exports = {
     // 'eslint:recommended',
     // 'plugin:react/recommended',
     'plugin:prettier/recommended',
-    'prettier/react'
+    'prettier/react',
   ],
   parser: 'babel-eslint',
   globals: {
-    module: true,
+    // module: true,
     document: true,
-    require: true,
-    __dirname: true
+    // require: true,
+    // __dirname: true
   },
   plugins: ['prettier'],
   rules: {
-    'prettier/prettier': ['error']
-  }
+    'prettier/prettier': ['error'],
+  },
 };

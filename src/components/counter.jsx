@@ -1,6 +1,5 @@
 import React from 'react';
 import axios from 'axios';
-
 // import { hot } from 'react-hot-loader';
 
 class Counter extends React.Component {
@@ -8,7 +7,7 @@ class Counter extends React.Component {
     super(props);
     this.state = {
       number: 1,
-      text: []
+      text: [],
     };
 
     this.clickHandler = this.clickHandler.bind(this);
@@ -19,7 +18,7 @@ class Counter extends React.Component {
       const getData = await axios.get('http://localhost:3000/posts');
       const data = await getData.data;
       this.setState({
-        text: data
+        text: data,
       });
     } catch {
       throw new Error("We couldn't get any data!!!!!");
@@ -32,12 +31,12 @@ class Counter extends React.Component {
     const decrement = number - 1;
     if (e.target.name === 'increment') {
       this.setState({
-        number: increment
+        number: increment,
       });
       return;
     }
     this.setState({
-      number: decrement
+      number: decrement,
     });
   }
 
