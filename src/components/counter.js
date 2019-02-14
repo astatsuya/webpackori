@@ -16,7 +16,7 @@ class Counter extends React.Component {
 
   async componentDidMount() {
     try {
-      const getData = await axios.get('http://localhost:3000/postsd');
+      const getData = await axios.get('http://localhost:3000/posts');
       const data = await getData.data;
       this.setState({
         text: data
