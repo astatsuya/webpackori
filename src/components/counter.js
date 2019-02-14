@@ -22,7 +22,6 @@ class Counter extends React.Component {
       text: data
     });
   }
-
   clickHandler(e) {
     const increment = this.state.number + 1;
     const decrement = this.state.number - 1;

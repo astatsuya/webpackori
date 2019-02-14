@@ -60,5 +60,9 @@ module.exports = {
   performance: {
     hints: false
   },
+  devtool: 'source-map',
+  devServer: {
+    overlay: true
+  },
   plugins: [htmlPlugin, new webpack.HotModuleReplacementPlugin()]
 };
