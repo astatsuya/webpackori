@@ -3,6 +3,7 @@ const path = require('path');
 const webpack = require('webpack');
 
 const htmlPlugin = new HtmlWebpackPlugin({
+  // inject: 'body'
   template: './public/index.html',
   filename: './index.html'
 });
@@ -57,7 +58,7 @@ module.exports = {
     ]
   },
   performance: {
-    hints: false
+    hints: 'warning'
   },
   plugins: [htmlPlugin, new webpack.HotModuleReplacementPlugin()]
 };
