@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "json-server --watch db.json webpack-dev-server --hot --mode development --open",
+    "start": "webpack-dev-server --hot --mode development --open | json-server --watch db.json ",
     "build": "webpack --config webpack.config.js",
     "eslint": "eslint \"src/**/*.{js,jsx}\"",
     "stylelint": "stylelint src/**/*.*"
