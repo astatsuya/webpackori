@@ -58,7 +58,7 @@ module.exports = {
     ]
   },
   performance: {
-    hints: 'warning'
+    hints: false
   },
   plugins: [htmlPlugin, new webpack.HotModuleReplacementPlugin()]
 };

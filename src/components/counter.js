@@ -1,14 +1,26 @@
 import React from 'react';
+import axios from 'axios';
+// import regeneratorRuntime from 'regenerator-runtime';
+
 // import { hot } from 'react-hot-loader';
 
 class Counter extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      number: 1
+      number: 1,
+      text: []
     };
 
     this.clickHandler = this.clickHandler.bind(this);
+  }
+
+  async componentDidMount() {
+    const getData = await axios.get('http://localhost:3000/posts');
+    const data = await getData.data;
+    this.setState({
+      text: data
+    });
   }
 
   clickHandler(e) {
@@ -35,6 +47,11 @@ class Counter extends React.Component {
         <button type="button" name="decrement" onClick={this.clickHandler}>
           -
         </button>
+        <ul>
+          {this.state.text.map(text => (
+            <li key={text.id}>{text.title}</li>
+          ))}
+        </ul>
       </div>
     );
   }

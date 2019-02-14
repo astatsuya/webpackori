@@ -11,6 +11,7 @@ const App = () => (
   <div className={styles.app}>
     <Counter />
     <Test />
+    <p>ここからapp.js</p>
     <h2>これはh2</h2>
     <p>ここはIndex</p>
     <p>ここはIndex</p>
