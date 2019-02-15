@@ -5,6 +5,7 @@ import React from 'react';
 import { hot } from 'react-hot-loader';
 import Test from './test';
 import Counter from './counter';
+import UseState from './hooks';
 import styles from './appScss.scss';
 import boy from '../images/boy.jpg';
 
@@ -12,6 +13,7 @@ const App = () => (
   <div className={styles.app}>
     <Counter />
     <Test />
+    <UseState />
     <p>ここからapp.js</p>
     <h2>これはh2</h2>
     <p>ここはIndex</p>
