@@ -11,6 +11,9 @@ const UseState = () => {
     strings: 'strrrr',
     boolean: false,
   });
+
+  const changeStrings = () => change(`${str}change`);
+
   return (
     <div className="hooks">
       <h2>ddd</h2>
@@ -18,7 +21,7 @@ const UseState = () => {
         num
       </button>
       <p>{num}</p>
-      <button type="button" onClick={() => change(`${str}sadja`)}>
+      <button type="button" onClick={changeStrings}>
         strings
       </button>
       <p>{str}</p>
