@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
-// import { useState } from 'react';
 
-const UseState = () => {
+const Hooks = () => {
   const [num, add] = useState(5);
   const [str, change] = useState('str!!!');
   const [arr, push] = useState([1, 2, 3]);
@@ -55,4 +54,4 @@ const UseState = () => {
   );
 };
 
-export default UseState;
+export default Hooks;
