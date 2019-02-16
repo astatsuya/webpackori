@@ -13,8 +13,12 @@ const Hooks = () => {
 
   const changeStrings = () => change(`${str}change`);
 
+  const title = async () => {
+    document.title = await 'awaitttt!';
+  };
+
   useEffect(() => {
-    document.title = 'useEffected!!!';
+    title();
   });
 
   return (
