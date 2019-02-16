@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 // import { useState } from 'react';
 
 const UseState = () => {
@@ -13,6 +13,10 @@ const UseState = () => {
   });
 
   const changeStrings = () => change(`${str}change`);
+
+  useEffect(() => {
+    document.title = 'useEffected!!!';
+  });
 
   return (
     <div className="hooks">
@@ -35,11 +39,18 @@ const UseState = () => {
       <p>{boo ? 'true' : 'false'}</p>
       <button
         type="button"
-        onClick={() => obChange({ number: obj.number + 1 })}
+        onClick={() =>
+          obChange({
+            ...obj,
+            number: obj.number + 1,
+            strings: `${obj.strings}ddd`,
+          })
+        }
       >
         object
       </button>
-      <p>{`Object:${obj.number}`}</p>
+      <p>{`number:${obj.number}`}</p>
+      <p>{`strings:${obj.strings}`}</p>
     </div>
   );
 };
